@@ -989,36 +989,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114761416458226212, guid: 0bc75c8defc825949876225d77f5d17d,
-        type: 2}
-      propertyPath: DrivingState
-      value: 1
+    - target: {fileID: 1265359199633098, guid: 0bc75c8defc825949876225d77f5d17d, type: 2}
+      propertyPath: m_Name
+      value: Player 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bc75c8defc825949876225d77f5d17d, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &919538730 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1265359199633098, guid: 0bc75c8defc825949876225d77f5d17d,
-    type: 2}
-  m_PrefabInternal: {fileID: 703414243}
---- !u!114 &919538731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 919538730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd93943f1949ff94fba09d13cb6b4cab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_StartingHP: 10
-  m_CurrentHP: 0
-  deathTime: 0
-  deathMaterial: {fileID: 0}
-  damageEffectFactor: 0
-  m_IsAlive: 1
 --- !u!1 &1225191952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,7 +1220,7 @@ MonoBehaviour:
   m_MinHeight: 9
   m_MaxHeight: 20
   m_CameraHeight: 0
-  m_HeightConstant: 4
+  m_HeightConstant: 0
   m_RestirctConstant: 5
   playerRest: {fileID: 0}
 --- !u!20 &1687258584

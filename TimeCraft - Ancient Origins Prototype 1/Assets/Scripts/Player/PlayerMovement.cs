@@ -145,7 +145,7 @@ public class PlayerMovement : MonoBehaviour
 		Vector3 verticalMovement = Camera.main.transform.forward * player.GetAxis ("Vertical");
 		Vector3 horizontalMovement = Camera.main.transform.right * player.GetAxis ("Horizontal");
 		Vector3 movementVector = verticalMovement + horizontalMovement;
-		print ("movementVector.mag: " + movementVector.magnitude);
+		//print ("movementVector.mag: " + movementVector.magnitude);
 		if (movementVector.magnitude > 1f)
 			movementVector = movementVector.normalized;
 		Vector3 velocityVector = movementVector * speed;
