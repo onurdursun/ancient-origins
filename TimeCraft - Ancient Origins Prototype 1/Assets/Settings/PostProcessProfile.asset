@@ -54,6 +54,7 @@ MonoBehaviour:
   dirtTexture:
     overrideState: 0
     value: {fileID: 0}
+    defaultState: 1
   dirtIntensity:
     overrideState: 0
     value: 0
@@ -73,11 +74,12 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   gradingMode:
-    overrideState: 0
+    overrideState: 1
     value: 1
   externalLut:
     overrideState: 0
     value: {fileID: 0}
+    defaultState: 1
   tonemapper:
     overrideState: 1
     value: 2
@@ -99,20 +101,21 @@ MonoBehaviour:
   toneCurveGamma:
     overrideState: 0
     value: 1
-  logLut:
-    overrideState: 0
-    value: {fileID: 0}
   ldrLut:
     overrideState: 0
     value: {fileID: 0}
-  temperature:
+    defaultState: 4
+  ldrLutContribution:
     overrideState: 0
-    value: 0
+    value: 1
+  temperature:
+    overrideState: 1
+    value: 11
   tint:
     overrideState: 0
     value: 0
   colorFilter:
-    overrideState: 0
+    overrideState: 1
     value: {r: 1, g: 1, b: 1, a: 1}
   hueShift:
     overrideState: 0
@@ -372,6 +375,7 @@ MonoBehaviour:
   mask:
     overrideState: 0
     value: {fileID: 0}
+    defaultState: 1
   opacity:
     overrideState: 0
     value: 1
