@@ -76,7 +76,7 @@ public class PlayerShooting : NetworkBehaviour
 
 		if (m_PlayerClass.EnumPlayerClass == Class.EClass.ARCHER) {
 
-			if (GetComponent<PlayerStates>().MoveState == PlayerStates.EMoveState.RUNNING)
+			if (GetComponent<PlayerStates>().RunState == PlayerStates.ERunState.RUNNING)
 				return;
 		
 			timer += Time.deltaTime;

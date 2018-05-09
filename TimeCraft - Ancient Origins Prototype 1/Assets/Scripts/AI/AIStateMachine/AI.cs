@@ -49,7 +49,7 @@ public class AI : MonoBehaviour
 
 	// Update is called once per frame
 	void FixedUpdate () {
-
+		/*
 		//print ("Current State: " + stateMachine.currentState);
 
 		if (!m_AIHealth.m_IsAlive) {
@@ -106,7 +106,7 @@ public class AI : MonoBehaviour
 				} 
 
 		stateMachine.Update ();
-			
+			*/
 	}
 }
 	

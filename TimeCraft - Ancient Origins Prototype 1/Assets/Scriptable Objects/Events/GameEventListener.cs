@@ -8,8 +8,6 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace RoboRyanTron.Unite2017.Events
-{
     public class GameEventListener : MonoBehaviour
     {
         [Tooltip("Event to register with.")]
@@ -32,5 +30,5 @@ namespace RoboRyanTron.Unite2017.Events
         {
             Response.Invoke();
         }
-    }
+    
 }

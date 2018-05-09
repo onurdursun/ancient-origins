@@ -8,19 +8,22 @@ public class PlayerSetup : MonoBehaviour {
 	CharacterController m_CharacterController;
 	PlayerAnimation m_PlayerAnimation;
 	PlayerMovement m_PlayerMovement;
-	PlayerHealth m_PlayerHealth;
+	PlayerStates m_PlayerStates;
 	Animator m_Animator;
 	Collider m_Collider;
+	public int playerId;
+	public Class playerClass;
 
 	// Use this for initialization
 	void Start () {
 		m_CharacterController = GetComponent<CharacterController> ();
 		m_PlayerAnimation = GetComponent<PlayerAnimation> ();
 		m_PlayerMovement = GetComponent<PlayerMovement> ();
-		m_PlayerHealth = GetComponent<PlayerHealth> ();
 		m_Animator = GetComponent<Animator>();
 		m_Collider = GetComponent<Collider> ();
-		m_PlayerHealth.deathTime = deathTime;
+		m_PlayerStates = GetComponent<PlayerStates> ();
+		m_PlayerMovement.playerId = playerId;
+		m_PlayerAnimation.playerId = playerId;
 		ActivatePlayer ();
 
 	}
@@ -34,6 +37,7 @@ public class PlayerSetup : MonoBehaviour {
 		m_Animator.enabled = true;
 		m_Collider.enabled = true;
 		ToggleRagdoll (false);
+		m_PlayerStates.isAlive = true;
 
 	}
 
@@ -45,6 +49,7 @@ public class PlayerSetup : MonoBehaviour {
 		m_Collider.enabled = false;
 		ToggleRagdoll (true);
 		DeactivateNumerator ();
+		m_PlayerStates.isAlive = false;
 	}
 
 	IEnumerator DeactivateNumerator(){

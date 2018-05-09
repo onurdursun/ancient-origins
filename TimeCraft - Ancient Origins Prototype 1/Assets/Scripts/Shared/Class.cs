@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Class : MonoBehaviour {
+
+[CreateAssetMenu]
+public class Class : ScriptableObject {
 
 
 	public enum EClass
@@ -15,21 +17,9 @@ public class Class : MonoBehaviour {
 		ARCHER,
 		DEFAULT,
 
-
-
-
-
-
-
 	}
-
-	public enum EWeaponClass{
-		
-	}
-
 
 	public EClass EnumPlayerClass;
-	public EClass EnumAIClass;
 
 
 	
