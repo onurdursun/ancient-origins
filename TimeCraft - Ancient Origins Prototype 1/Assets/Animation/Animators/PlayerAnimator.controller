@@ -9,6 +9,7 @@ AnimatorController:
   serializedVersion: 5
   m_AnimatorParameters:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - m_Name: Horizontal
     m_Type: 1
     m_DefaultFloat: 0
@@ -17,11 +18,14 @@ AnimatorController:
     m_Controller: {fileID: 9100000}
 =======
 >>>>>>> parent of 545f50b... 6.12.2018
+=======
+>>>>>>> parent of 545f50b... 6.12.2018
   - m_Name: Speed
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_Controller: {fileID: 9100000}
   - m_Name: Vertical
@@ -59,13 +63,22 @@ AnimatorController:
     m_Controller: {fileID: 0}
   - m_Name: Horizontal
 >>>>>>> parent of 545f50b... 6.12.2018
+=======
+    m_Controller: {fileID: 0}
+  - m_Name: Horizontal
+>>>>>>> parent of 545f50b... 6.12.2018
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Controller: {fileID: 9100000}
   - m_Name: zPos
+=======
+    m_Controller: {fileID: 0}
+  - m_Name: Vertical
+>>>>>>> parent of 545f50b... 6.12.2018
 =======
     m_Controller: {fileID: 0}
   - m_Name: Vertical
@@ -75,8 +88,13 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Controller: {fileID: 9100000}
   - m_Name: Equip
+=======
+    m_Controller: {fileID: 0}
+  - m_Name: Attack
+>>>>>>> parent of 545f50b... 6.12.2018
 =======
     m_Controller: {fileID: 0}
   - m_Name: Attack
@@ -770,6 +788,8 @@ AnimatorStateTransition:
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 --- !u!1101 &1101133283938585432
+<<<<<<< HEAD
+=======
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -791,20 +811,24 @@ AnimatorStateTransition:
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 --- !u!1101 &1101133710826958692
+>>>>>>> parent of 545f50b... 6.12.2018
 AnimatorStateTransition:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 1102394339194150696}
+  m_DstState: {fileID: 1102758953458221984}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
+<<<<<<< HEAD
+  m_ExitTime: 0.8469388
+=======
   m_ExitTime: 0.8958333
   m_HasExitTime: 1
   m_HasFixedDuration: 1
@@ -827,12 +851,17 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
   m_ExitTime: 0.8958333
+>>>>>>> parent of 545f50b... 6.12.2018
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+<<<<<<< HEAD
+--- !u!1101 &1101133710826958692
+=======
 --- !u!1101 &1101217450731983226
+>>>>>>> parent of 545f50b... 6.12.2018
 AnimatorStateTransition:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
@@ -840,41 +869,61 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 0}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 1
-  serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.8469388
-  m_HasExitTime: 1
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
---- !u!1101 &1101236101270860506
-AnimatorStateTransition:
-  m_ObjectHideFlags: 3
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_Conditions: []
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 1102758953458221984}
+  m_DstState: {fileID: 1102394339194150696}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
+<<<<<<< HEAD
+  m_ExitTime: 0.8958333
+=======
   m_ExitTime: 0.8469388
+>>>>>>> parent of 545f50b... 6.12.2018
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+<<<<<<< HEAD
+--- !u!1101 &1101187968624880766
+=======
+--- !u!1101 &1101236101270860506
+>>>>>>> parent of 545f50b... 6.12.2018
+AnimatorStateTransition:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+<<<<<<< HEAD
+  m_DstState: {fileID: 1102503664713862614}
+=======
+  m_DstState: {fileID: 1102758953458221984}
+>>>>>>> parent of 545f50b... 6.12.2018
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+<<<<<<< HEAD
+  m_ExitTime: 0.8958333
+=======
+  m_ExitTime: 0.8469388
+>>>>>>> parent of 545f50b... 6.12.2018
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+<<<<<<< HEAD
+--- !u!1101 &1101217450731983226
+=======
 --- !u!1101 &1101421926112313064
+>>>>>>> parent of 545f50b... 6.12.2018
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -895,9 +944,13 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+<<<<<<< HEAD
+--- !u!1101 &1101236101270860506
+=======
 --- !u!1101 &1101651995074763672
+>>>>>>> parent of 545f50b... 6.12.2018
 AnimatorStateTransition:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
@@ -906,6 +959,76 @@ AnimatorStateTransition:
     m_ConditionEvent: Speed
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
+<<<<<<< HEAD
+  m_DstState: {fileID: 1102758953458221984}
+=======
+  m_DstState: {fileID: 1102889392696322202}
+>>>>>>> parent of 545f50b... 6.12.2018
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+<<<<<<< HEAD
+  m_ExitTime: 0.8469388
+  m_HasExitTime: 1
+=======
+  m_ExitTime: 0.96781117
+  m_HasExitTime: 0
+>>>>>>> parent of 545f50b... 6.12.2018
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+<<<<<<< HEAD
+--- !u!1101 &1101421926112313064
+=======
+--- !u!1101 &1101668253324799422
+>>>>>>> parent of 545f50b... 6.12.2018
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+<<<<<<< HEAD
+  m_DstState: {fileID: 1102964893325662256}
+=======
+  m_DstState: {fileID: 1102651325256887264}
+>>>>>>> parent of 545f50b... 6.12.2018
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.8958333
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+<<<<<<< HEAD
+--- !u!1101 &1101651995074763672
+=======
+--- !u!1101 &1101729648771369544
+>>>>>>> parent of 545f50b... 6.12.2018
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+<<<<<<< HEAD
+  m_Conditions:
+  - m_ConditionMode: 3
+    m_ConditionEvent: Speed
+    m_EventTreshold: 2
+=======
+  m_Conditions: []
+>>>>>>> parent of 545f50b... 6.12.2018
+  m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102889392696322202}
   m_Solo: 0
   m_Mute: 0
@@ -913,13 +1036,22 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
+<<<<<<< HEAD
   m_ExitTime: 0.96781117
   m_HasExitTime: 0
+=======
+  m_ExitTime: 0.8469388
+  m_HasExitTime: 1
+>>>>>>> parent of 545f50b... 6.12.2018
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+<<<<<<< HEAD
 --- !u!1101 &1101668253324799422
+=======
+--- !u!1101 &1101766135989451090
+>>>>>>> parent of 545f50b... 6.12.2018
 AnimatorStateTransition:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
@@ -927,13 +1059,18 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
+<<<<<<< HEAD
   m_DstState: {fileID: 1102651325256887264}
+=======
+  m_DstState: {fileID: 1102970583644633642}
+>>>>>>> parent of 545f50b... 6.12.2018
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
+<<<<<<< HEAD
   m_ExitTime: 0.8958333
   m_HasExitTime: 1
   m_HasFixedDuration: 1
@@ -976,6 +1113,8 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
+=======
+>>>>>>> parent of 545f50b... 6.12.2018
   m_ExitTime: 0.75
   m_HasExitTime: 1
   m_HasFixedDuration: 1
@@ -1127,6 +1266,7 @@ AnimatorState:
   m_CycleOffsetParameter: 
   m_TimeParameter: 
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1102 &1102250056986045204
 AnimatorState:
   serializedVersion: 5
@@ -1154,6 +1294,8 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+=======
+>>>>>>> parent of 545f50b... 6.12.2018
 =======
 >>>>>>> parent of 545f50b... 6.12.2018
 --- !u!1102 &1102330377540715568
@@ -1209,6 +1351,7 @@ AnimatorState:
   m_CycleOffsetParameter: 
   m_TimeParameter: 
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1102 &1102409300692524064
 AnimatorState:
   serializedVersion: 5
@@ -1236,6 +1379,8 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+=======
+>>>>>>> parent of 545f50b... 6.12.2018
 =======
 >>>>>>> parent of 545f50b... 6.12.2018
 --- !u!1102 &1102503664713862614
@@ -1349,8 +1494,13 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Name: Combo3
   m_Speed: 1.5
+=======
+  m_Name: New State
+  m_Speed: 1
+>>>>>>> parent of 545f50b... 6.12.2018
 =======
   m_Name: New State
   m_Speed: 1
