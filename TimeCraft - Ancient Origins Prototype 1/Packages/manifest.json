@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "com.unity.render-pipelines.lightweight": "1.1.5-preview"
+    "com.unity.entities": "0.0.12-preview.6",
+    "com.unity.render-pipelines.lightweight": "1.1.10-preview",
+    "com.unity.render-pipelines.core": "1.1.10-preview",
+    "com.unity.ads": "exclude",
+    "com.unity.purchasing": "exclude"
   }
 }
