@@ -8,7 +8,7 @@ public class PlayerMeleeWeapon : Weapon {
 	PlayerStates m_PlayerStates;
 	// Use this for initialization
 	void Start () {
-		damage = m_Damage;
+		//damage = m_Damage;
 		m_PlayerStates = GetComponentInParent<PlayerStates>();
 	}
 	protected bool isAttacking(){
@@ -28,7 +28,7 @@ public class PlayerMeleeWeapon : Weapon {
 			//print ("I'm Attacking: " + other.name);
 			Vector3 direction = transform.position - other.transform.position;
 			direction = direction.normalized;
-			DealDamage (other.gameObject,direction);
+			//DealDamage (other.gameObject,direction);
 
 			// We then get the opposite (-Vector3) and normalize it
 			direction = -direction.normalized;

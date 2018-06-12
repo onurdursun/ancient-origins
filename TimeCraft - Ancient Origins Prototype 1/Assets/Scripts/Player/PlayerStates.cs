@@ -1,9 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Rewired;
+using System.Xml.Schema;
+
+
 
 public class PlayerStates : MonoBehaviour {
+
 
 
 	public enum ERunState
@@ -18,10 +23,6 @@ public class PlayerStates : MonoBehaviour {
 		IDLE,
 		ATTACKING,
 		DEFENCING,
-		IMPACT,
-		COMBO,
-
-
 	}
 
 
@@ -35,21 +36,23 @@ public class PlayerStates : MonoBehaviour {
 	public ELifeState LifeState;
 
 
+	public FloatVariable playerCurrentSpeed;
 
 
-	public bool isSprinting;
-	public bool isAlive;
+	public BoolVariable isAlive;
+	public bool isMoving { get{ return !Mathf.Approximately (playerCurrentSpeed.Value, 0);
+		} private set{}
+	}
+	public bool isSprinting{ get{ return !Mathf.Approximately (player.GetAxis ("Sprint"), 0);
+		} private set{}
+	}
 
+	[HideInInspector]
 	public int playerId;
 	private Player player;
 
-
-	PlayerHealth m_PlayerHealth;
-
-
 	void Awake() {
-
-		m_PlayerHealth = GetComponent<PlayerHealth> ();
+	
 		player = ReInput.players.GetPlayer(playerId);
 	}
 
@@ -61,22 +64,20 @@ public class PlayerStates : MonoBehaviour {
 		SetLifeState ();
 
 	}
-	void SetWeaponState(EWeaponState weaponState) {
-		WeaponState = weaponState;
+	public void SetWeaponState(int value) {
+		if (value == 0)
+			WeaponState = EWeaponState.IDLE;
+		else if (value == 1)
+			WeaponState = EWeaponState.ATTACKING;
+		else
+			WeaponState = EWeaponState.DEFENCING;
 	}
 	void SetMoveState() {
-		isSprinting = player.GetAxis ("Sprint") != 0f;
-		if (isSprinting)
-			RunState = ERunState.SPRINTING;
-		else
-			RunState = ERunState.RUNNING;
+		RunState = isSprinting && isMoving ? ERunState.SPRINTING : ERunState.RUNNING;
 }
 
 	void SetLifeState() {
-		if (isAlive)
-			LifeState = ELifeState.ALIVE;
-		else
-			LifeState = ELifeState.DEAD;
+		LifeState = isAlive.Value ? ELifeState.ALIVE : ELifeState.DEAD;
 
 	}
 	/*void SetDrivingState(EDrivingState _DrivingState){

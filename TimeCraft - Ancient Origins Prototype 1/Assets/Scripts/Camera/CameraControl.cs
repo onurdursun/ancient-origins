@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.Events;
+using EZCameraShake;
 
 public class CameraControl : MonoBehaviour
 {
@@ -142,4 +144,6 @@ public class CameraControl : MonoBehaviour
 
 
 	}
+
+
 }

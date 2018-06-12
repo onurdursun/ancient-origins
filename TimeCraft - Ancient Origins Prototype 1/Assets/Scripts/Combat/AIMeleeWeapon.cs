@@ -11,8 +11,8 @@ public class AIMeleeWeapon : Weapon {
 	AIAnimations m_AIAnimations;
 	// Use this for initialization
 	void Start () {
-		damage = m_Damage;
-		reloadTime = m_ReloadTime;
+		//damage = m_Damage;
+		//reloadTime = m_ReloadTime;
 		m_AIBehaviours = GetComponentInParent<AIBehaviours>();
 		m_AIAnimations = GetComponentInParent<AIAnimations> ();
 	}
@@ -21,7 +21,7 @@ public class AIMeleeWeapon : Weapon {
 		
 		get { 
 			if (m_AIBehaviours.WeaponState == AIBehaviours.EWeaponState.ATTACKING) {
-				StartCoroutine (m_AIAnimations.Reload (reloadTime));
+				//StartCoroutine (m_AIAnimations.Reload (reloadTime));
 				return true;
 			} else
 				return false;
@@ -41,7 +41,7 @@ public class AIMeleeWeapon : Weapon {
 			print ("I'm Attacking: " + other.name);
 			Vector3 direction = transform.position - other.transform.position;
 			direction = direction.normalized;
-			DealDamage (other.gameObject,direction);
+			//DealDamage (other.gameObject,direction);
 
 			// We then get the opposite (-Vector3) and normalize it
 			direction = -direction.normalized;
