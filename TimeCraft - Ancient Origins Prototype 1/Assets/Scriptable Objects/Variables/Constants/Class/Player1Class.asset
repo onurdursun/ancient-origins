@@ -8,8 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7d5cc13f1f75d940a87a38a5781d179, type: 3}
-  m_Name: PlayerTurnSpeed
+  m_Script: {fileID: 11500000, guid: 35eb78846fd20be41a9df577eaafaf2f, type: 3}
+  m_Name: Player1Class
   m_EditorClassIdentifier: 
-  DeveloperDescription: 
-  Value: 1
+  EnumPlayerClass: 4

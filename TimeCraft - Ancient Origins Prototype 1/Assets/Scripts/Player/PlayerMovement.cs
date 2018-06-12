@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using Rewired;
 using System;
-using UnityEngine.Events;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -18,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     
 	private float refSpeed;
 
+	int i;
+	int j;
     /*public AudioSource m_MovementAudio;           // Reference to the audio source used to play engine sounds. NB: different to the shooting audio source.
     public AudioClip m_EngineIdling;              // Audio to play when the tank isn't moving.
     public AudioClip m_EngineDriving;             // Audio to play when the tank is moving.
@@ -26,12 +27,12 @@ public class PlayerMovement : MonoBehaviour
     			// Reference used to move the tank.
 	//private LineRenderer m_LineRenderer;
 
-	public BoolVariable isAttacking;
-	public Transform hips;
+
 
 
 	PlayerStates m_PlayerStates;
 	PlayerAnimation m_PlayerAnimation;
+
 
 	int layerMask;
 	float timer = 0f;
@@ -39,13 +40,8 @@ public class PlayerMovement : MonoBehaviour
 	CharacterController cController;
 
 
-
-
     private void Awake()
     {
-		
-
-		isAttacking.SetValue (false);
 		player = ReInput.players.GetPlayer(playerId);
 		m_SpeedFactor.SetValue (m_RunSpeed.Value);
 		refSpeed = m_SpeedFactor.Value;
@@ -56,61 +52,49 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void FixedUpdate() {
-
-		Gravity ();
-		Jump ();
-
-		if (isAttacking.Value) {
-			currentSpeed.SetValue (0f);
-
-			//transform.position = hips.position;
-			return;
-		}
 		Move ();
 		Turn ();
-
-
+		Gravity ();
+		Jump ();
 
 	}
 
     private void Move()
 	{
-		
-			//print ("raw: " + player.GetAxis2DRaw ("Horizontal", "Vertical"));
+
+		print ("raw: " + player.GetAxis2DRaw ("Horizontal","Vertical"));
 
 
-			if (m_PlayerStates.RunState == PlayerStates.ERunState.SPRINTING) {
-				Mathf.SmoothDamp (m_RunSpeed.Value, 20, ref refSpeed, 0.5f, m_SprintSpeed.Value);
+		if (m_PlayerStates.RunState == PlayerStates.ERunState.SPRINTING) {
+			Mathf.SmoothDamp (m_RunSpeed.Value, 20, ref refSpeed, 0.5f, m_SprintSpeed.Value);
+			m_SpeedFactor.SetValue (refSpeed);
+
+
+		} else {
+			if (m_SpeedFactor.Value > m_RunSpeed.Value) {
+				Mathf.SmoothDamp (m_SprintSpeed.Value, m_RunSpeed.Value, ref refSpeed, 2f);
 				m_SpeedFactor.SetValue (refSpeed);
-
-
-			} else {
-				if (m_SpeedFactor.Value > m_RunSpeed.Value) {
-					Mathf.SmoothDamp (m_SprintSpeed.Value, m_RunSpeed.Value, ref refSpeed, 2f);
-					m_SpeedFactor.SetValue (refSpeed);
-				}
-
 			}
 
-
-			Vector3 verticalMovement = Camera.main.transform.forward * player.GetAxis2DRaw ("Horizontal", "Vertical").y;
-			Vector3 horizontalMovement = Camera.main.transform.right * player.GetAxis2DRaw ("Horizontal", "Vertical").x;
-			Vector3 movementVector = verticalMovement + horizontalMovement;
-			if (movementVector.magnitude > 1f || m_PlayerStates.RunState == PlayerStates.ERunState.SPRINTING)
-				movementVector = movementVector.normalized;
-			Vector3 velocityVector = movementVector * m_SpeedFactor.Value;
-			currentSpeed.SetValue (velocityVector.magnitude);
+		}
 
 
+		Vector3 verticalMovement = Camera.main.transform.forward * player.GetAxis2DRaw ("Horizontal", "Vertical").y;
+		Vector3 horizontalMovement = Camera.main.transform.right * player.GetAxis2DRaw ("Horizontal", "Vertical").x;
+		Vector3 movementVector = verticalMovement + horizontalMovement;
+		if (movementVector.magnitude > 1f || m_PlayerStates.RunState == PlayerStates.ERunState.SPRINTING)
+			movementVector = movementVector.normalized;
+		Vector3 velocityVector = movementVector * m_SpeedFactor.Value;
+		currentSpeed.SetValue (velocityVector.magnitude);
 
 
-			if (currentSpeed.Value < 2f) {
-				currentSpeed.SetValue (0f);
-				return;
-			}
+		if (currentSpeed.Value < 2f) {
+			currentSpeed.SetValue (0f);
+			return;
+		}
 
 
-			cController.Move (velocityVector * Time.deltaTime);
+		cController.Move (velocityVector * Time.deltaTime);
 
 
 
@@ -158,6 +142,7 @@ public class PlayerMovement : MonoBehaviour
 				} else
 					return;
 			} else {
+
 				timer = 0f;
 				Quaternion rotation = Quaternion.Lerp (transform.rotation, Quaternion.Euler (0, (Mathf.Rad2Deg * Mathf.Atan2 (player.GetAxis ("HorizontalTurn"), player.GetAxis ("VerticalTurn"))) + Camera.main.transform.eulerAngles.y, 0), m_TurnSpeed.Value * 15 * Time.deltaTime);
 				transform.rotation = rotation;

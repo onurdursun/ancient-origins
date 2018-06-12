@@ -3,22 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour {
-	public Transform spineHolder;
-	public Transform handHolder;
 
-	public void Equip(){
+	protected int damage;
+	protected float reloadTime;
 
-		if (transform.parent == handHolder) {
-			transform.SetParent (spineHolder);
-			TransformReset (transform);
-		} else {
-			transform.SetParent (handHolder);
-			TransformReset (transform);
-		}
+
+
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
 	}
 
-	void TransformReset(Transform _transform){
-		_transform.localPosition = Vector3.zero;
-		_transform.localRotation = Quaternion.Euler (Vector3.zero);
+	protected void DealDamage(GameObject go, Vector3 direction){
+		go.GetComponent<Health>().Damage (damage,direction);
+		//print ("I'm dealing damage to: " + go.name);
 	}
 }
